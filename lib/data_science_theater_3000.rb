@@ -6,11 +6,6 @@ module DataScienceTheater3000
     url = "http://www.datasciencetoolkit.org"
     response = Curl::Easy.perform( url + "/ip2coordinates/" + ip ).body_str
     coordinates = make_hashy(response).with_indifferent_access
-    if coordinates[ip].nil?
-      coordinates = { ip => {"country_name"=>"United States", "region"=>"AL", "dma_code"=>630, "latitude"=>33.4667015075684, "country_code"=>"US", "area_code"=>205, "postal_code"=>"35209", "locality"=>"Birmingham", "country_code3"=>"USA", "longitude"=>-86.8066024780273}}.with_indifferent_access
-    else
-      coordinates
-    end
   end
 
   def self.street2coordinates address
