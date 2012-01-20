@@ -1,3 +1,5 @@
+require "active_support"
+require "json"
 require "curb"
 require "data_science_theater_3000/version"
 
@@ -9,7 +11,8 @@ module DataScienceTheater3000
   def self.ip2coordinates ip
     url = "http://www.datasciencetoolkit.org"
     response = Curl::Easy.perform( url + "/ip2coordinates/" + ip ).body_str
-    coordinates = make_hashy(response).with_indifferent_access
+
+    coordinates = make_hashy(response)
   end
 
   # Converts a street address into a location hash
