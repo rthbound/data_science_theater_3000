@@ -2,6 +2,14 @@ require "curb"
 require "data_science_theater_3000/version"
 
 module DataScienceTheater3000
+  # Converts an ip address into a location hash
+  # (key is ip string)
+  #
+  # == Parameters
+  # format::
+  #   A String specifying the ip address to be located.
+  # == Returns:
+  #   A Hash, key is the ip string passed in as parameter, value is a hash of location information.
   def self.ip2coordinates ip
     url = "http://www.datasciencetoolkit.org"
     response = Curl::Easy.perform( url + "/ip2coordinates/" + ip ).body_str
