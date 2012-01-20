@@ -1,17 +1,17 @@
 # data_science_theater_3000
 
 
-## Development Installation
+### Installation
 
-### Ubuntu users may need to install dependencies for curb:
+#### Ubuntu users may need to install dependencies for curb:
     $ sudo apt-get install libcurl3 libcurl3-gnutls libcurl4-openssl-dev
     $ gem install curb
-### Then:
+#### Then:
     $ gem install data_science_theater_3000
 
-## Usage
+### Usage
 
-Just ...
+#### Just ...
     require "data_science_theater_3000"
 
 ## Contributing
