@@ -4,7 +4,7 @@ require "data_science_theater_3000/version"
 module DataScienceTheater3000
   # Converts an ip address into a location hash
   #
-  # @param [String] ip the ip address to be located.
+  # @param [String] ip the ip address to be located
   # @return [Hash] key is the ip string passed in as parameter, value is a hash of location information.
   def self.ip2coordinates ip
     url = "http://www.datasciencetoolkit.org"
@@ -12,6 +12,10 @@ module DataScienceTheater3000
     coordinates = make_hashy(response).with_indifferent_access
   end
 
+  # Converts a street address into a location hash
+  #
+  # @param [String] address the address to be located
+  # @return [Hash] key is the address string passed in as a paremeter, value is a hash of location information
   def self.street2coordinates address
     url = "http://www.datasciencetoolkit.org"
     address.gsub!( "," , "%2c" )
@@ -21,6 +25,11 @@ module DataScienceTheater3000
     coordinates = make_hashy(response)
   end
   
+  # Uses latitude,longitude pair to find detailed political information about a location.
+  # Currently supporting a single pair.
+  #
+  # @param [String] "latitude,longitude"
+  # @return [Array] Array containing hashes with detailed political information about a location
   def self.coordinates2politics coords
     url = "http://www.datasciencetoolkit.org"
     coords.gsub!( "," , "%2c" )

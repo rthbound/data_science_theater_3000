@@ -1,4 +1,4 @@
-# data_science_toolkit_3000
+# data_science_theater_3000
 
 
 ## Development Installation
@@ -9,6 +9,10 @@
 ### Then:
     $ gem install data_science_theater_3000
 
+## Usage
+
+Just ...
+    require "data_science_theater_3000"
 
 ## Contributing
 
