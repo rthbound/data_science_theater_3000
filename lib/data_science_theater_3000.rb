@@ -56,6 +56,20 @@ module DataScienceTheater3000
     #times = make_hashy(response)
   end
 
+  # Specify path to an image file and return the discernable text.
+  #
+  # @param [String] file_path
+  # @return [String] text discerned from image
+  def self.file2text file_path
+    url = "http://www.datasciencetoolkit.org"
+    c = Curl::Easy.new( url + '/file2text')
+    c.multipart_form_post = true
+    c.http_post(Curl::PostField.file('inputfile', file_path))
+
+    response = c.body_str
+  end
+
+
   def self.make_hashy response
     ActiveSupport::JSON.decode(response)
   end
