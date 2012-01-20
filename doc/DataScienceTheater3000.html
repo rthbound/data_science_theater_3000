@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: DataScienceTheater3000
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (D)</a> &raquo; 
+    
+    
+    <span class="title">DataScienceTheater3000</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: DataScienceTheater3000
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/data_science_theater_3000.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#coordinates2politics-class_method" title="coordinates2politics (class method)">+ (Object) <strong>coordinates2politics</strong>(coords) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ip2coordinates-class_method" title="ip2coordinates (class method)">+ (Object) <strong>ip2coordinates</strong>(ip) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Converts an ip address into a location hash (key is ip string).
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_hashy-class_method" title="make_hashy (class method)">+ (Object) <strong>make_hashy</strong>(response) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#street2coordinates-class_method" title="street2coordinates (class method)">+ (Object) <strong>street2coordinates</strong>(address) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text2people-class_method" title="text2people (class method)">+ (Object) <strong>text2people</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#text2times-class_method" title="text2times (class method)">+ (Object) <strong>text2times</strong>(text) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="coordinates2politics-class_method">
+  
+    + (<tt>Object</tt>) <strong>coordinates2politics</strong>(coords) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/data_science_theater_3000.rb', line 28</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_coordinates2politics identifier id'>coordinates2politics</span> <span class='rubyid_coords identifier id'>coords</span>
+  <span class='rubyid_url identifier id'>url</span> <span class='assign token'>=</span> <span class='string val'>&quot;http://www.datasciencetoolkit.org&quot;</span>
+  <span class='rubyid_coords identifier id'>coords</span><span class='dot token'>.</span><span class='rubyid_gsub! fid id'>gsub!</span><span class='lparen token'>(</span> <span class='string val'>&quot;,&quot;</span> <span class='comma token'>,</span> <span class='string val'>&quot;%2c&quot;</span> <span class='rparen token'>)</span>
+  <span class='rubyid_response identifier id'>response</span> <span class='assign token'>=</span> <span class='rubyid_Curl constant id'>Curl</span><span class='colon2 op'>::</span><span class='rubyid_Easy constant id'>Easy</span><span class='dot token'>.</span><span class='rubyid_perform identifier id'>perform</span><span class='lparen token'>(</span> <span class='rubyid_url identifier id'>url</span> <span class='plus op'>+</span> <span class='string val'>&quot;/coordinates2politics/&quot;</span> <span class='plus op'>+</span> <span class='rubyid_coords identifier id'>coords</span> <span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_body_str identifier id'>body_str</span>
+
+  <span class='rubyid_coordinates identifier id'>coordinates</span> <span class='assign token'>=</span> <span class='rubyid_make_hashy identifier id'>make_hashy</span><span class='lparen token'>(</span><span class='rubyid_response identifier id'>response</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="ip2coordinates-class_method">
+  
+    + (<tt>Object</tt>) <strong>ip2coordinates</strong>(ip) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Converts an ip address into a location hash (key is ip string)
+</p>
+<h2>Parameters</h2>
+<table>
+<tr><td valign="top">format:</td><td>A String specifying the ip address to be located.
+
+</td></tr>
+</table>
+<h2>Returns:</h2>
+<pre class="code">
+  <span class='rubyid_A constant id'>A</span> <span class='rubyid_Hash constant id'>Hash</span><span class='comma token'>,</span> <span class='rubyid_key identifier id'>key</span> <span class='rubyid_is identifier id'>is</span> <span class='rubyid_the identifier id'>the</span> <span class='rubyid_ip identifier id'>ip</span> <span class='rubyid_string identifier id'>string</span> <span class='rubyid_passed identifier id'>passed</span> <span class='rubyid_in in kw'>in</span> <span class='rubyid_as identifier id'>as</span> <span class='rubyid_parameter identifier id'>parameter</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span> <span class='rubyid_is identifier id'>is</span> <span class='rubyid_a identifier id'>a</span> <span class='rubyid_hash identifier id'>hash</span> <span class='rubyid_of identifier id'>of</span> <span class='rubyid_location identifier id'>location</span> <span class='rubyid_information identifier id'>information</span><span class='dot token'>.</span>
+</pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/data_science_theater_3000.rb', line 13</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_ip2coordinates identifier id'>ip2coordinates</span> <span class='rubyid_ip identifier id'>ip</span>
+  <span class='rubyid_url identifier id'>url</span> <span class='assign token'>=</span> <span class='string val'>&quot;http://www.datasciencetoolkit.org&quot;</span>
+  <span class='rubyid_response identifier id'>response</span> <span class='assign token'>=</span> <span class='rubyid_Curl constant id'>Curl</span><span class='colon2 op'>::</span><span class='rubyid_Easy constant id'>Easy</span><span class='dot token'>.</span><span class='rubyid_perform identifier id'>perform</span><span class='lparen token'>(</span> <span class='rubyid_url identifier id'>url</span> <span class='plus op'>+</span> <span class='string val'>&quot;/ip2coordinates/&quot;</span> <span class='plus op'>+</span> <span class='rubyid_ip identifier id'>ip</span> <span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_body_str identifier id'>body_str</span>
+  <span class='rubyid_coordinates identifier id'>coordinates</span> <span class='assign token'>=</span> <span class='rubyid_make_hashy identifier id'>make_hashy</span><span class='lparen token'>(</span><span class='rubyid_response identifier id'>response</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_with_indifferent_access identifier id'>with_indifferent_access</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="make_hashy-class_method">
+  
+    + (<tt>Object</tt>) <strong>make_hashy</strong>(response) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/data_science_theater_3000.rb', line 54</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_make_hashy identifier id'>make_hashy</span> <span class='rubyid_response identifier id'>response</span>
+  <span class='rubyid_ActiveSupport constant id'>ActiveSupport</span><span class='colon2 op'>::</span><span class='rubyid_JSON constant id'>JSON</span><span class='dot token'>.</span><span class='rubyid_decode identifier id'>decode</span><span class='lparen token'>(</span><span class='rubyid_response identifier id'>response</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="street2coordinates-class_method">
+  
+    + (<tt>Object</tt>) <strong>street2coordinates</strong>(address) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21
+22
+23
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/data_science_theater_3000.rb', line 19</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_street2coordinates identifier id'>street2coordinates</span> <span class='rubyid_address identifier id'>address</span>
+  <span class='rubyid_url identifier id'>url</span> <span class='assign token'>=</span> <span class='string val'>&quot;http://www.datasciencetoolkit.org&quot;</span>
+  <span class='rubyid_address identifier id'>address</span><span class='dot token'>.</span><span class='rubyid_gsub! fid id'>gsub!</span><span class='lparen token'>(</span> <span class='string val'>&quot;,&quot;</span> <span class='comma token'>,</span> <span class='string val'>&quot;%2c&quot;</span> <span class='rparen token'>)</span>
+  <span class='rubyid_address identifier id'>address</span><span class='dot token'>.</span><span class='rubyid_gsub! fid id'>gsub!</span><span class='lparen token'>(</span> <span class='string val'>&quot; &quot;</span> <span class='comma token'>,</span> <span class='string val'>&quot;+&quot;</span>   <span class='rparen token'>)</span>
+  <span class='rubyid_response identifier id'>response</span> <span class='assign token'>=</span> <span class='rubyid_Curl constant id'>Curl</span><span class='colon2 op'>::</span><span class='rubyid_Easy constant id'>Easy</span><span class='dot token'>.</span><span class='rubyid_perform identifier id'>perform</span><span class='lparen token'>(</span> <span class='rubyid_url identifier id'>url</span> <span class='plus op'>+</span> <span class='string val'>&quot;/street2coordinates/&quot;</span> <span class='plus op'>+</span> <span class='rubyid_address identifier id'>address</span> <span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_body_str identifier id'>body_str</span>
+
+  <span class='rubyid_coordinates identifier id'>coordinates</span> <span class='assign token'>=</span> <span class='rubyid_make_hashy identifier id'>make_hashy</span><span class='lparen token'>(</span><span class='rubyid_response identifier id'>response</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="text2people-class_method">
+  
+    + (<tt>Object</tt>) <strong>text2people</strong>(name) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/data_science_theater_3000.rb', line 36</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_text2people identifier id'>text2people</span> <span class='rubyid_name identifier id'>name</span>
+  <span class='comment val'>#TODO should take array of names as well</span>
+  <span class='comment val'>#FIXME curl wants different arguments</span>
+  <span class='comment val'>#url = &quot;http://www.datasciencetoolkit.org&quot;</span>
+  <span class='comment val'>#response = Curl::Easy.perform( url + &quot;/text2people/&quot; + name ).body_str</span>
+
+  <span class='comment val'>#person = make_hashy(response)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="text2times-class_method">
+  
+    + (<tt>Object</tt>) <strong>text2times</strong>(text) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/data_science_theater_3000.rb', line 45</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_text2times identifier id'>text2times</span> <span class='rubyid_text identifier id'>text</span>
+  <span class='comment val'>#url = &quot;http://www.datasciencetoolkit.org&quot;</span>
+  <span class='comment val'>#text.gsub!( &quot;,&quot; , &quot;%2c&quot; )</span>
+  <span class='comment val'>#FIXME curl wants different arguments</span>
+  <span class='comment val'>#response = Curl::Easy.perform( url + &quot;/text2times/&quot; + text ).body_str</span>
+
+  <span class='comment val'>#times = make_hashy(response)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Thu Jan 19 18:55:07 2012 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
