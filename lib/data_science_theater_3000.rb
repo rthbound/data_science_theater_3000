@@ -64,6 +64,9 @@ module DataScienceTheater3000
   # @param [String] file_path
   # @return [String] text discerned from image
   def self.file2text file_path
+    file_reg = /([^\s]+(\.(?i)(jpg|png|gif|bmp))$)/
+    raise "Does not look like path to a file: #{file_path}" if !file_reg.match(file_path)
+    raise "Support paths to images hosted remotely soon" if file_path.include?('http:')
     url = "http://www.datasciencetoolkit.org"
     c = Curl::Easy.new( url + '/file2text')
     c.multipart_form_post = true
