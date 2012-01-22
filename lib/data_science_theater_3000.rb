@@ -31,9 +31,9 @@ module DataScienceTheater3000
   def self.street2coordinates address
     url = "http://www.datasciencetoolkit.org"
     if address.class == String
-      address.gsub!(",", "%2c").gsub!(" ", "+")
+      address.gsub!(",", "%2c"); address.gsub!(" ", "+")
     elsif address.class == Array
-      address.each {|a| a.gsub!(",", "%2c").gsub!(" ", "+") }
+      address.each {|a| a.gsub!(",", "%2c"); a.gsub!(" ", "+") }
       address = ActiveSupport::JSON.encode(address)
     end
     response = Curl::Easy.perform( url + "/street2coordinates/" + address ).body_str
