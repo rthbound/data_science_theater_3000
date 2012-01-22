@@ -36,7 +36,7 @@ module DataScienceTheater3000
   # Uses latitude,longitude pair to find detailed political information about a location.
   # Currently supporting a single pair.
   #
-  # @param [String,Hash] coords "lat,long" or the hash returned from ip2coordinates/street2coordinates
+  # @param [Hash] hash returned from ip2coordinates/street2coordinates or just a string like "33,-86"
   # @return [Array] contains hashes with detailed political information for a location
   def self.coordinates2politics coords 
     if coords.class == Hash
