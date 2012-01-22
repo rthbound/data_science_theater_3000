@@ -59,7 +59,7 @@ module DataScienceTheater3000
   
   # Specify a name or names and return parsed result as well as a best-guess for gender
   #
-  # @param [Array, String] name can be array of name strings or a single name
+  # @param [Array,String] name can be array of name strings or a single name
   # @return [Hash] information related to the provided name
   def self.text2people name
     url = "http://www.datasciencetoolkit.org"
@@ -84,7 +84,7 @@ module DataScienceTheater3000
   # @param [String] file_path
   # @return [String] text discerned from image
   def self.file2text file_path
-    file_reg = /([^\s]+(\.(?i)(jpg|png|gif|bmp))$)/
+    file_reg = /([^\s]+(\.(?i)(jpg|png|gif|bmp|pdf|html))$)/
     raise "Does not look like path to a file: #{file_path}" if !file_reg.match(file_path)
     raise "Support paths to images hosted remotely soon" if file_path.include?('http:')
     url = "http://www.datasciencetoolkit.org"
