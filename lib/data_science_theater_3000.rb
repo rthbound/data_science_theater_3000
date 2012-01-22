@@ -22,21 +22,25 @@ module DataScienceTheater3000
 
   # Converts a street address into a location hash
   #
-  # @param [String] address the address to be located
+  # @param [String, Array] address as either a single string or array of strings
   # @return [Hash] hash of location information. Can be passed as input to coordinates2politics
   def self.street2coordinates address
     url = "http://www.datasciencetoolkit.org"
-    address.gsub!( "," , "%2c" )
-    address.gsub!( " " , "+"   )
-    response = Curl::Easy.perform( url + "/street2coordinates/" + address ).body_str
-
+    if address.class == String
+      address.gsub!(",", "%2c").gsub!(" ", "+")
+      response = Curl::Easy.perform( url + "/street2coordinates/" + address ).body_str
+    elsif address.class == Array
+      address.each {|a| a.gsub!(",", "%2c").gsub!(" ", "+") }
+      address = ActiveSupport::JSON.encode(address)
+      response = Curl::Easy.perform( url + "/street2coordinates/" + address ).body_str
+    end
     coordinates = make_hashy(response)
   end
   
   # Uses latitude,longitude pair to find detailed political information about a location.
   # Currently supporting a single pair.
   #
-  # @param [Hash] hash returned from ip2coordinates/street2coordinates or just a string like "33,-86"
+  # @param [Hash,String] hash returned from ip2coordinates/street2coordinates or just a string like "33,-86"
   # @return [Array] contains hashes with detailed political information for a location
   def self.coordinates2politics coords 
     if coords.class == Hash
@@ -51,8 +55,6 @@ module DataScienceTheater3000
   end
   
   def self.text2people name
-    #TODO should take array of names as well
-    #FIXME curl wants different arguments
     #url = "http://www.datasciencetoolkit.org"
     #response = Curl::Easy.perform( url + "/text2people/" + name ).body_str
 
@@ -61,8 +63,6 @@ module DataScienceTheater3000
 
   def self.text2times text
     #url = "http://www.datasciencetoolkit.org"
-    #text.gsub!( "," , "%2c" )
-    #FIXME curl wants different arguments
     #response = Curl::Easy.perform( url + "/text2times/" + text ).body_str
 
     #times = make_hashy(response)
