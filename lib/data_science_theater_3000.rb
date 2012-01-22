@@ -7,18 +7,23 @@ module DataScienceTheater3000
   # Converts an ip address into a location hash
   #
   # @param [String] ip the ip address to be located
-  # @return [Hash] key is the ip string passed in as parameter, value is a hash of location information.
+  # @return [Hash] hash of location information. Can be passed as input to coordinates2politics
   def self.ip2coordinates ip
     url = "http://www.datasciencetoolkit.org"
     response = Curl::Easy.perform( url + "/ip2coordinates/" + ip ).body_str
 
     coordinates = make_hashy(response)
+    # Account for satellite provider or anonymous proxy
+    if coordinates.invert.keys.include?(nil)
+      coordinates[ip] = { :longitude => "unknown", :latitude => "unknown", :country => "unknown", :region => "unknown", :postal_code => "unknown" }
+    end
+    coordinates
   end
 
   # Converts a street address into a location hash
   #
   # @param [String] address the address to be located
-  # @return [Hash] key is the address string passed in as a paremeter, value is a hash of location information
+  # @return [Hash] hash of location information. Can be passed as input to coordinates2politics
   def self.street2coordinates address
     url = "http://www.datasciencetoolkit.org"
     address.gsub!( "," , "%2c" )
@@ -31,9 +36,13 @@ module DataScienceTheater3000
   # Uses latitude,longitude pair to find detailed political information about a location.
   # Currently supporting a single pair.
   #
-  # @param [String] "latitude,longitude"
-  # @return [Array] Array containing hashes with detailed political information about a location
-  def self.coordinates2politics coords
+  # @param [String,Hash] coords "lat,long" or the hash returned from ip2coordinates/street2coordinates
+  # @return [Array] contains hashes with detailed political information for a location
+  def self.coordinates2politics coords 
+    if coords.class == Hash
+      coords = coords.keys.map{|k| "#{coords[k]["latitude"]},#{coords[k]["longitude"]}"}.first
+    end
+
     url = "http://www.datasciencetoolkit.org"
     coords.gsub!( "," , "%2c" )
     response = Curl::Easy.perform( url + "/coordinates2politics/" + coords ).body_str
@@ -74,7 +83,6 @@ module DataScienceTheater3000
 
     response = c.body_str
   end
-
 
   def self.make_hashy response
     ActiveSupport::JSON.decode(response)
