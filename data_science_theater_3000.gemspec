@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = DataScienceTheater3000::VERSION
   s.authors     = ["Tad Hosford"]
   s.email       = ["tad@isotope11.com"]
-  s.homepage    = "http://github.com/rthbound/data_science_theater_3000"
+  s.homepage    = "http://www.isotope11.com/blog/data-science-theater-3000-a-ruby-interface-for-data-science-toolkit"
   s.summary     = %q{Ruby interface to Data Science Toolkit.}
   s.description = %q{Ruby interface to issue Data Science Toolkit API calls.}
 
