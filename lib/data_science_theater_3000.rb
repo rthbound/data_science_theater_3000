@@ -19,7 +19,7 @@ module DataScienceTheater3000
     coordinates = make_hashy(response)
     # Account for satellite provider or anonymous proxy
     if coordinates.invert.keys.include?(nil)
-      coordinates[ip] = { :longitude => "unknown", :latitude => "unknown", :country => "unknown", :region => "unknown", :postal_code => "unknown" }
+      coordinates[ip] = { "longitude" => "unknown", "latitude" => "unknown", "country" => "unknown", "region" => "unknown", "postal_code" => "unknown" }
     end
     coordinates
   end
