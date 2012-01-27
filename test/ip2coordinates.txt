@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Fri, 27 Jan 2012 21:36:11 GMT
+Server: Apache/2.2.14 (Ubuntu)
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack) 3.0.4
+Content-Length: 241
+Status: 200
+Vary: Accept-Encoding
+Content-Type: text/html;charset=utf-8
+
+{"24.73.187.202":{"longitude":-86.8066024780273,"country_name":"United States","postal_code":"35209","region":"AL","locality":"Birmingham","country_code":"US","dma_code":630,"latitude":33.4667015075684,"country_code3":"USA","area_code":205}}

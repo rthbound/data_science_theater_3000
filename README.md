@@ -1,5 +1,6 @@
 # data_science_theater_3000
 
+Ruby API wrapper for the [Data Science Toolkit](http://www.datasciencetoolkit.org/)
 
 ### Installation
 
@@ -13,15 +14,12 @@
 
 #### Just ...
     require "data_science_theater_3000"
-    
-    dst3k = DataScienceTheater3000
-    dst3k.ip2coordinates(ip_string)
-    dst3k.file2text(path_to_file) # local files only right now
-    dst3k.coordinates2politics(lat_long_string)
-    #Chaining:
-    dst3k.street2coordinates(address_string)
-    dst3k.coordinates2politics( dst3k.ip2coordinates(ip_string) )
-    dst3k.coordinates2politics( dst3k.street2coordinates(address_string) )
+
+    request = DataScienceTheater3000::Ip2Coordinates.new('8.8.8.8')
+    > #<DataScienceTheater3000::Ip2Coordinates:0x000000019c7f60 @ip="8.8.8.8">
+    request.result
+    > {"8.8.8.8"=>{"longitude"=>-122.057403564453, "country_name"=>"United States", "postal_code"=>"94043", "region"=>"CA", "locality"=>"Mountain View", "country_code"=>"US", "dma_code"=>807, "latitude"=>37.4192008972168, "country_code3"=>"USA", "area_code"=>650}}
+
 
 ## Contributing
 

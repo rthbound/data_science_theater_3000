@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Date: Fri, 27 Jan 2012 21:41:01 GMT
+Server: Apache/2.2.14 (Ubuntu)
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack) 3.0.4
+Content-Disposition: attachment; filename="sample.png.txt"
+Content-Length: 481
+Status: 200
+Vary: Accept-Encoding
+Content-Type: text/plain;charset=utf-8
+
+lf you pass in an image, this API will run an optical character recoghition algorithm to extract any words or
+sentences it can from the picture. lf you upload a PDF file, Word document, Excel spreadsheet or HTML file, it
+will retum a plain text version of the content. Unlike most of the calls, this one takes its input in the standard
+multipart form-encoded format that’s used when browsers upload files, rather than as JSON. lt retums any content
+it finds as a stream of text.
