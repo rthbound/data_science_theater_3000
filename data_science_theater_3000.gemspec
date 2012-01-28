@@ -5,7 +5,7 @@ require "data_science_theater_3000/version"
 Gem::Specification.new do |s|
   s.name        = "data_science_theater_3000"
   s.version     = DataScienceTheater3000::VERSION
-  s.authors     = ["Tad Hosford"]
+  s.authors     = ["Tad Hosford", "Nicholas Fine"]
   s.email       = ["tad@isotope11.com"]
   s.homepage    = "http://www.isotope11.com/blog/data-science-theater-3000-a-ruby-interface-for-data-science-toolkit"
   s.summary     = %q{Ruby interface to Data Science Toolkit.}
