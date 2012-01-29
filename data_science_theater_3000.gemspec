@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'active_support'
   s.add_dependency 'curb'
   s.add_dependency 'json'
+  s.add_development_dependency "rake"
   s.add_development_dependency "minitest"
   s.add_development_dependency "webmock"
   s.add_development_dependency 'ruby-debug19'
