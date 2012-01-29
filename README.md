@@ -15,19 +15,19 @@ Ruby API wrapper for the [Data Science Toolkit](http://www.datasciencetoolkit.or
 #### Just ...
     require "data_science_theater_3000"
 
-    request = DataScienceTheater3000::Ip2Coordinates.new('8.8.8.8')
+    request = DataScienceTheater3000::Ip2Coordinates.new( '8.8.8.8' )
     > #<DataScienceTheater3000::Ip2Coordinates:0x000000019c7f60 @ip="8.8.8.8">
     request.result
     > {"8.8.8.8"=>{"longitude"=>-122.057403564453, "country_name"=>"United States", "postal_code"=>"94043", "region"=>"CA", "locality"=>"Mountain View", "country_code"=>"US", "dma_code"=>807, "latitude"=>37.4192008972168, "country_code3"=>"USA", "area_code"=>650}}
 
 #### This is also fun ... pass street/ip2coordinates output to coordinates2politics
-    coordinates_request = DataScienceTheater3000::Ip2Coordinates.new(["8.8.8.8", "74.125.224.72"])
+    locations_request = DataScienceTheater3000::Ip2Coordinates.new( ["8.8.8.8", "74.125.224.72"] )
     > #<DataScienceTheater3000::Ip2Coordinates:0x000000026b17f8 @ip="[\"8.8.8.8\",\"74.125.224.72\"]">
 
-    location = location_request.result
+    locations = locations_request.result
     > {"8.8.8.8"=>{ ... ... ... }, "74.125.224.72"=>{ ... ... ... }}
 
-    politics_request = DataScienceTheater3000::Coordinates2Politics.new(location)
+    politics_request = DataScienceTheater3000::Coordinates2Politics.new( locations )
     > #<DataScienceTheater3000::Coordinates2Politics:0x00000002ba6470 @coordinates="[[\"37.4192008972168\",\"-122.057403564453\"],[\"37.4192008972168\",\"-122.057403564453\"]]"> 
 
     politics = politics_request.result
