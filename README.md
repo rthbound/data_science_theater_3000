@@ -12,7 +12,7 @@ Ruby API wrapper for the [Data Science Toolkit](http://www.datasciencetoolkit.or
 
 ### Usage
 
-Just ...
+#### Just ...
     require "data_science_theater_3000"
 
     request = DataScienceTheater3000::Ip2Coordinates.new('8.8.8.8')
@@ -20,7 +20,7 @@ Just ...
     request.result
     > {"8.8.8.8"=>{"longitude"=>-122.057403564453, "country_name"=>"United States", "postal_code"=>"94043", "region"=>"CA", "locality"=>"Mountain View", "country_code"=>"US", "dma_code"=>807, "latitude"=>37.4192008972168, "country_code3"=>"USA", "area_code"=>650}}
 
-This is also fun ... pass street/ip2coordinates output to coordinates2politics
+#### This is also fun ... pass street/ip2coordinates output to coordinates2politics
     coordinates_request = DataScienceTheater3000::Ip2Coordinates.new(["8.8.8.8", "74.125.224.72"])
     > #<DataScienceTheater3000::Ip2Coordinates:0x000000026b17f8 @ip="[\"8.8.8.8\",\"74.125.224.72\"]">
 
@@ -33,7 +33,7 @@ This is also fun ... pass street/ip2coordinates output to coordinates2politics
     politics = politics_request.result
     > [{"politics"=>[{"type"=>"admin2", "code"=>"usa", "name"=>"United States", "friendly_type"=>"country"}, {"type"=>"admin4", "code"=>"us06", "name"=>"California", "friendly_type"=>"state"}, {"type"=>"constituency", "code"=>"06_14", "name"=>"Fourteenth district, CA", "friendly_type"=>"constituency"}, {"type"=>"admin5", "code"=>"06_49670", "name"=>"Mountain View", "friendly_type"=>"city"}, {"type"=>"admin5", "code"=>"_", "name"=>"", "friendly_type"=>"city"}, {"type"=>"admin6", "code"=>"06_085", "name"=>"Santa Clara", "friendly_type"=>"county"}, {"type"=>"admin5", "code"=>"06_77000", "name"=>"Sunnyvale", "friendly_type"=>"city"}], "location"=>{"longitude"=>"-122.057403564453", "latitude"=>"37.4192008972168"}}, {"politics"=>[{"type"=>"admin2", "code"=>"usa", "name"=>"United States", "friendly_type"=>"country"}, {"type"=>"admin4", "code"=>"us06", "name"=>"California", "friendly_type"=>"state"}, {"type"=>"constituency", "code"=>"06_14", "name"=>"Fourteenth district, CA", "friendly_type"=>"constituency"}, {"type"=>"admin5", "code"=>"06_49670", "name"=>"Mountain View", "friendly_type"=>"city"}, {"type"=>"admin5", "code"=>"_", "name"=>"", "friendly_type"=>"city"}, {"type"=>"admin6", "code"=>"06_085", "name"=>"Santa Clara", "friendly_type"=>"county"}, {"type"=>"admin5", "code"=>"06_77000", "name"=>"Sunnyvale", "friendly_type"=>"city"}], "location"=>{"longitude"=>"-122.057403564453", "latitude"=>"37.4192008972168"}}]
 
-Try out the File2Text feature:
+#### Try out the File2Text feature:
     request = DataScienceTheater3000::File2Text.new("doc/sample.png")
     > #<DataScienceTheater3000::File2Text:0x000000025da370 @file_path="doc/sample.png"> 
     request.result
