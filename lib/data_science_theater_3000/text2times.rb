@@ -22,9 +22,9 @@ module DataScienceTheater3000
       @dst_request ||= 
         case 
         when text_string.length < 7500
-          DataScienceToolkit::Request.new(request_method: 'text2times', request_params: text_string)
+          DataScienceToolkit::Request.new(request_method => 'text2times', request_params => text_string)
         when text_string.length >= 7500
-          DataScienceToolkit::PostBodyRequest.new(request_method: 'text2times', request_params: text_string, post_key: 'body')
+          DataScienceToolkit::PostBodyRequest.new(request_method => 'text2times', request_params => text_string, post_key => 'body')
         end
     end
   end

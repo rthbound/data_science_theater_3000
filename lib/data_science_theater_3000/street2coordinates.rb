@@ -22,7 +22,7 @@ module DataScienceTheater3000
     protected
     # @api private
     def dst_request
-      @dst_request ||= DataScienceToolkit::Request.new(request_method: 'street2coordinates', request_params: address)
+      @dst_request ||= DataScienceToolkit::Request.new(request_method => 'street2coordinates', request_params => address)
     end
   end
 end

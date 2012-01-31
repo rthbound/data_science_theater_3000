@@ -22,7 +22,11 @@ module DataScienceTheater3000
     protected
     # @api private
     def dst_request
-      @dst_request ||= DataScienceToolkit::Request.new(request_method: 'ip2coordinates', request_params: ip)
+      begin
+        @dst_request ||= DataScienceToolkit::Request.new(request_method: 'ip2coordinates', request_params: ip)
+      rescue
+        @dst_request ||= DataScienceToolkit::Request.new(request_method => 'ip2coordinates', request_params => ip)
+      end
     end
   end
 end

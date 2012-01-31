@@ -29,7 +29,11 @@ module DataScienceTheater3000
     protected
     # @api private
     def dst_request
-      @dst_request ||= DataScienceToolkit::Request.new(request_method: 'coordinates2politics', request_params: coordinates)
+      begin
+        @dst_request ||= DataScienceToolkit::Request.new(request_method: 'coordinates2politics', request_params: coordinates)
+      rescue
+        @dst_request ||= DataScienceToolkit::Request.new(request_method => 'coordinates2politics', request_params => coordinates)
+      end
     end
 
     def sanitize coordinates

@@ -26,8 +26,13 @@ module DataScienceTheater3000
 
     # @api private
     def dst_request
+      begin
       @dst_request ||= 
         DataScienceToolkit::PostFileRequest.new(request_method: 'file2text', request_params: file_path, post_key: 'inputfile')
+      rescue
+      @dst_request ||= 
+        DataScienceToolkit::PostFileRequest.new(request_method => 'file2text', request_params => file_path, post_key => 'inputfile')
+      end
     end
   end
 end

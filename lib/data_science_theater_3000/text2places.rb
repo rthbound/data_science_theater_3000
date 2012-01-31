@@ -20,7 +20,7 @@ module DataScienceTheater3000
     # @api private
     def dst_request
       @dst_request ||= 
-        DataScienceToolkit::Request.new(request_method: 'text2places', request_params: text_string)
+        DataScienceToolkit::Request.new(request_method => 'text2places', request_params => text_string)
     end
   end
 end

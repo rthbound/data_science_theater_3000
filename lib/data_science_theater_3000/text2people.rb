@@ -22,7 +22,7 @@ module DataScienceTheater3000
     # @api private
     def dst_request
       @dst_request ||= 
-        DataScienceToolkit::PostBodyRequest.new(request_method: 'text2people', request_params: name, post_key: 'body')
+        DataScienceToolkit::PostBodyRequest.new(request_method => 'text2people', request_params => name, post_key => 'body')
     end
   end
 end
