@@ -1,4 +1,4 @@
-# data_science_theater_3000
+# data_science_theater_3000 [![Code Climate](https://codeclimate.com/github/rthbound/rubeuler.png)](https://codeclimate.com/github/rthbound/rubeuler)
 
 Ruby API wrapper for the [Data Science Toolkit](http://www.datasciencetoolkit.org/)
 
